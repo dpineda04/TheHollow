@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/IntoTheWoods_V1.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
