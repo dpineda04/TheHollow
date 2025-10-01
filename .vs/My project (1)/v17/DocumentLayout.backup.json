@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\h703253041\\My project (1)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|c:\\users\\h703253041\\my project (1)\\assets\\basic functions\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|C:\\Users\\h703253041\\My project (1)\\assets\\basic functions\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|solutionrelative:assets\\basic functions\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|c:\\users\\h703253041\\my project (1)\\assets\\basic functions\\point and delete\\keepalive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|solutionrelative:assets\\basic functions\\point and delete\\keepalive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}|Assembly-CSharp.csproj|C:\\Users\\h703253041\\My project (1)\\assets\\basic functions\\movecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -44,7 +48,7 @@
               "RelativeDocumentMoniker": "Assets\\Basic Functions\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\h703253041\\My project (1)\\Assets\\Basic Functions\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Basic Functions\\PlayerMovement.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwBMAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T16:21:05.226Z",
               "IsPinned": true,
@@ -57,6 +61,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "KeepAlive.cs",
+              "DocumentMoniker": "C:\\Users\\h703253041\\My project (1)\\Assets\\Basic Functions\\point and delete\\KeepAlive.cs",
+              "RelativeDocumentMoniker": "Assets\\Basic Functions\\point and delete\\KeepAlive.cs",
+              "ToolTip": "C:\\Users\\h703253041\\My project (1)\\Assets\\Basic Functions\\point and delete\\KeepAlive.cs",
+              "RelativeToolTip": "Assets\\Basic Functions\\point and delete\\KeepAlive.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T16:07:12.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MoveCamera.cs",
               "DocumentMoniker": "C:\\Users\\h703253041\\My project (1)\\Assets\\Basic Functions\\MoveCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Basic Functions\\MoveCamera.cs",
@@ -68,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlayerCam.cs",
               "DocumentMoniker": "C:\\Users\\h703253041\\My project (1)\\Assets\\Basic Functions\\PlayerCam.cs",
               "RelativeDocumentMoniker": "Assets\\Basic Functions\\PlayerCam.cs",
@@ -80,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ChangeColor.cs",
               "DocumentMoniker": "C:\\Users\\h703253041\\My project (1)\\Assets\\Basic Functions\\ChangeColor.cs",
               "RelativeDocumentMoniker": "Assets\\Basic Functions\\ChangeColor.cs",
@@ -92,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ChangeColor.cs",
               "DocumentMoniker": "C:\\Users\\h703253041\\My project (1)\\Assets\\ChangeColor.cs",
               "RelativeDocumentMoniker": "Assets\\ChangeColor.cs",
@@ -104,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ObjectMover.cs",
               "DocumentMoniker": "C:\\Users\\h703253041\\My project (1)\\Assets\\ObjectMover.cs",
               "RelativeDocumentMoniker": "Assets\\ObjectMover.cs",

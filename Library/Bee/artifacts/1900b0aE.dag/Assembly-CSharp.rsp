@@ -116,6 +116,7 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
@@ -328,6 +329,8 @@
 -r:"Library/PackageCache/com.unity.testtools.codecoverage@1.2.6/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ForUI.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
@@ -357,6 +360,13 @@
 "Assets/Basic Functions/ObjectMover.cs"
 "Assets/Basic Functions/PlayerCam.cs"
 "Assets/Basic Functions/PlayerMovement.cs"
+"Assets/Basic Functions/point and delete/DeleteOnClickSimple.cs"
+"Assets/Basic Functions/point and delete/KeepAlive.cs"
+"Assets/Basic Functions/SprintController.cs"
+"Assets/Inventory Scripts/CollectibleItem.cs"
+"Assets/Inventory Scripts/Inventory.cs"
+"Assets/Inventory Scripts/Item.cs"
+"Assets/Object Items/ItemProximityNotifier.cs"
 -langversion:9.0
 /deterministic
 /optimize+

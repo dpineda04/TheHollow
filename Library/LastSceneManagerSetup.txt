@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/IntoTheWoods_V1.unity
+- path: Assets/IntoTheWoods_ObjectDeleteTest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
