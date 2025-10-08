@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
+    public float sprintSpeed;
+    
+    private float currentSpeed;
 
     public float groundDrag;
 
@@ -14,7 +17,11 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround; // this is for the drag, to make movement feel less slippery, only on the ground
     bool grounded;
 
+    [Header("Input Settings")]
     public Transform orientation;
+    public KeyCode sprintKey = KeyCode.LeftShift;
+
+    private bool isSprinting;
 
     float horizontalInput;
     float verticalInput;
@@ -27,14 +34,17 @@ public class PlayerMovement : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        currentSpeed = moveSpeed;
+        
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         //checking if there is ground by casting ray from half of players height and a little bit more down
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
@@ -46,6 +56,12 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+       isSprinting = Input.GetKey(sprintKey);
+       Debug.Log("Is Sprinting: " + isSprinting);
+
+       // handling sprint:
+       HandleSprinting();
     }
 
     private void FixedUpdate()
@@ -59,12 +75,33 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical"); // getting inputs
     }
 
+
+    private void HandleSprinting()
+    {
+        if (isSprinting && grounded && moveDirection.magnitude > 0.1f) 
+        {
+            currentSpeed = sprintSpeed;
+        }
+        else
+        {
+            currentSpeed = moveSpeed;
+        }
+    }
+
+
     private void MovePlayer()
     {
         //calculating movement direction - you move where ur facing
 
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        rb.AddForce(moveDirection.normalized * currentSpeed * 10f, ForceMode.Force);
     }
+
+    //checking if shift is being held:
+    public bool IsSprinting()
+    { 
+        return currentSpeed == sprintSpeed;
+    }
+
 }
