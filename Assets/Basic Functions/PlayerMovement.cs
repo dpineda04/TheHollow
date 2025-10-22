@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = 0;
 
        isSprinting = Input.GetKey(sprintKey);
-       Debug.Log("Is Sprinting: " + isSprinting);
+     
 
        // handling sprint:
        HandleSprinting();
