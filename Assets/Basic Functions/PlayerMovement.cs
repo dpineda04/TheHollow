@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Input Settings")]
     public Transform orientation;
     public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode interactKey = KeyCode.F; 
+
 
     private bool isSprinting;
 

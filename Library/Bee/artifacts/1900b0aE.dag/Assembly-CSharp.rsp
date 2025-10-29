@@ -364,7 +364,11 @@
 "Assets/Basic Functions/PlayerMovement.cs"
 "Assets/Inventory Scripts/CollectibleItem.cs"
 "Assets/Inventory Scripts/Inventory.cs"
+"Assets/Inventory Scripts/InventorySlot.cs"
+"Assets/Inventory Scripts/InventoryUI.cs"
 "Assets/Inventory Scripts/Item.cs"
+"Assets/Inventory Scripts/ItemPickup.cs"
+"Assets/Inventory Scripts/ItemProximityPickup.cs"
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/Antialiasing.cs"
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/Bloom.cs"
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/BloomAndFlares.cs"
@@ -403,7 +407,7 @@
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/Twirl.cs"
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs"
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/Vortex.cs"
-"Assets/Object Items/ItemProximityNotifier.cs"
+"Assets/UI Scripts/PickupHintUI.cs"
 -langversion:9.0
 /deterministic
 /optimize+

@@ -9,7 +9,8 @@ public class Item : ScriptableObject
     public string itemName;
     public Sprite icon;
 
-    public int targetSlotIndex; // the slot that the item belongs to
+    [Tooltip("Designated slot index")]
+    public int designatedSlot; // the slot that the item belongs to
 
     void Start()
     {

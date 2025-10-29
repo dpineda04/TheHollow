@@ -43,25 +43,25 @@ public class CollectibleItem : MonoBehaviour
             Debug.Log($"Item '{itemName}' spawned with radius {radius}.");
         }
 
-    private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Player"))
-            {
+    // private void OnTriggerEnter(Collider other)
+    //     {
+    //         if (other.CompareTag("Player"))
+    //         {
 
-            Debug.Log($"Player is near {itemName}!");
-            }
+    //         Debug.Log($"Player is near {itemName}!");
+    //         }
 
-         }
+    //      }
 
-    private void OnTriggerExit(Collider other)
-        {
-            if (other.CompareTag("Player"))
-            {
+    // private void OnTriggerExit(Collider other)
+    //     {
+    //         if (other.CompareTag("Player"))
+    //         {
 
-            Debug.Log($"Player has moved away from {itemName}!");
-            }
+    //         Debug.Log($"Player has moved away from {itemName}!");
+    //         }
 
-         }
+    //      }
 
     private void OnDrawGizmosSelected()
     {
