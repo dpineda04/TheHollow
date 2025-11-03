@@ -10,6 +10,7 @@ public class ItemProximityPickup : MonoBehaviour
     public Item item;
     public bool useDesignatedSlot = true;
     private PlayerMovement playerMovement;
+    public CollectibleItem collectible;
 
   // Holds reference to PlayerMovement when player is in range
     

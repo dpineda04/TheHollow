@@ -8,7 +8,9 @@ public class PickupHintUI : MonoBehaviour
     public static PickupHintUI instance; // easy singleton
 
     [Tooltip("Assign the TextMeshProUGUI element that will display hints")]
-    public TMP_Text hintText; // drag your TextMeshProUGUI object heree
+    public TMP_Text hintText; // drag your TextMeshProUGUI object here, 
+    // hint text style should be changed 
+
     public CanvasGroup canvasGroup;
 
     // Track which object asked to show the hint (prevents one object hiding another's hint)
@@ -29,6 +31,7 @@ public class PickupHintUI : MonoBehaviour
 
 
     // Show a hint. 'source' is the GameObject that requested it (e.g., the pickup)
+    //key and object name will be given though itemProxomityPickup, placed on each object
 
     public void ShowHint(GameObject source, KeyCode key, string objectName)
     {
