@@ -3,7 +3,7 @@
   height: 80px;
 
   /* ensure no image hides the color */
-  background-image: none;
+  
   /* valid color */
   background-color: rgb(255, 230, 179);
 
@@ -26,4 +26,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.menu-background {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-image: url("Pictures/forest_spooky.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
 }

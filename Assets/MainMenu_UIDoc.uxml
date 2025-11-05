@@ -1,8 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/StyleSheet.uss?fileID=7433441132597879392&amp;guid=e89882fce1ecee24ea6ee6cde210e3d0&amp;type=3#StyleSheet" />
+    <ui:Image name="BackgroundImage" class="menu-background" />
     <ui:GroupBox name="ButtonArea" style="position: absolute; align-items: center; align-self: center; width: 700px; height: 400px; top: 454px; left: 610px; border-left-color: rgb(255, 0, 143); border-right-color: rgb(255, 0, 143); border-top-color: rgb(255, 0, 143); border-bottom-color: rgb(255, 0, 143); justify-content: space-around;">
         <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayButton" class="button menu-button" />
         <ui:Button text="Options" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OptionsButton" class="button menu-button" />
         <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" class="button menu-button" />
     </ui:GroupBox>
+    <ui:Label tabindex="-1" text="The Hollow" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GameTitle" style="position: absolute; font-size: 110px; top: 155px; left: 585px; width: 750px; -unity-text-align: upper-center; -unity-font: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&quot;); -unity-font-style: bold; color: rgb(255, 164, 16); align-items: center; right: 562px;" />
 </ui:UXML>
