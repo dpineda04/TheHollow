@@ -6,84 +6,73 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    [Tooltip("Load Main Game")]
-    public string gameSceneName = "TheHollow";
+   private UIDocument uiDoc;
 
-    private UIDocument uiDoc; //create this doc
-
+    // cache these so OnDisable can safely unsubscribe
+    private Button playButton;
+    private Button optionsButton;
+    private Button quitButton;
 
     void OnEnable()
     {
         uiDoc = GetComponent<UIDocument>();
         if (uiDoc == null)
         {
-            Debug.LogError("Missing UIDocument component!");
+            Debug.LogWarning("MainMenuController: missing UIDocument on GameObject");
             return;
         }
 
         var root = uiDoc.rootVisualElement;
+        if (root == null)
+        {
+            Debug.LogWarning("MainMenuController: rootVisualElement is null");
+            return;
+        }
 
-        var playButton = root.Q<Button>("PlayButton");
-        var optionsButton = root.Q<Button>("OptionsButton");
-        var quitButton = root.Q<Button>("QuitButton");
+        // Cache references once
+        playButton = root.Q<Button>("PlayButton");
+        optionsButton = root.Q<Button>("OptionsButton");
+        quitButton = root.Q<Button>("QuitButton");
 
-        playButton.clicked += () => SceneManager.LoadScene("TheHollow");
-        optionsButton.clicked += () => Debug.Log("Options pressed");
-        quitButton.clicked += Application.Quit;
+        // Subscribe if they exist
+        if (playButton != null) playButton.clicked += OnPlayClicked;
+        if (optionsButton != null) optionsButton.clicked += OnOptionsClicked;
+        if (quitButton != null) quitButton.clicked += OnQuitClicked;
     }
 
     void OnDisable()
     {
-        if (uiDoc == null) return;
-        var root = uiDoc.rootVisualElement;
-
-        var playButton = root.Q<Button>("PlayButton");
-        var optionsButton = root.Q<Button>("OptionsButton");
-        var quitButton = root.Q<Button>("QuitButton");
-
+        // Unsubscribe from cached references only (safe even if root has been destroyed)
         if (playButton != null) playButton.clicked -= OnPlayClicked;
         if (optionsButton != null) optionsButton.clicked -= OnOptionsClicked;
         if (quitButton != null) quitButton.clicked -= OnQuitClicked;
 
-     void OnPlayClicked()
+        // Null out caches (optional but neat)
+        playButton = null;
+        optionsButton = null;
+        quitButton = null;
+        uiDoc = null;
+    }
+
+    private void OnPlayClicked()
     {
-        // Simple: synchronous load
         SceneManager.LoadScene("TheHollow");
-
-        // Or use async with a loading screen:
-        // StartCoroutine(LoadAsync(gameSceneName));
     }
 
-    void OnOptionsClicked()
+    private void OnOptionsClicked()
     {
-        Debug.Log("Open options UI");
-        // If you have an options panel inside the same UXML:
-        // optionsPanel = uiDoc.rootVisualElement.Q<VisualElement>("OptionsPanel");
-        // optionsPanel.style.display = DisplayStyle.Flex;
-
-        // Or load a separate scene / overlay
+        Debug.Log("Options clicked");
     }
 
-    void OnQuitClicked()
+    private void OnQuitClicked()
     {
         Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
-
-    // Example coroutine for async load (if you want a loading screen)
-    // private IEnumerator LoadAsync(string sceneName)
-    // {
-    //     var op = SceneManager.LoadSceneAsync(sceneName);
-    //     op.allowSceneActivation = true;
-    //     while (!op.isDone)
-    //     {
-    //         // update loading UI here using op.progress
-    //         yield return null;
-    //     }
-    // }
-
 
 
    
 }
 
-}

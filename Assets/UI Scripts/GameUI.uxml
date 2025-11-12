@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/StyleSheet.uss?fileID=7433441132597879392&amp;guid=e89882fce1ecee24ea6ee6cde210e3d0&amp;type=3#StyleSheet" />
+    <ui:VisualElement name="HudRoot" />
+    <ui:VisualElement name="PausePanel" class="pause-panel" style="display: flex; position: relative; bottom: 3px; width: 1920px; height: 1080px; background-image: url(&quot;project://database/Assets/Pictures/forest_spooky.jpg?fileID=2800000&amp;guid=34288929bf8fdb449a29f3b895c6d92f&amp;type=3#forest_spooky&quot;);">
+        <ui:VisualElement name="pause-overlay" class="pause-overlay" style="bottom: 100%; right: 100%; display: flex; background-image: url(&quot;project://database/Assets/Pictures/forest_spooky.jpg?fileID=2800000&amp;guid=34288929bf8fdb449a29f3b895c6d92f&amp;type=3#forest_spooky&quot;); -unity-background-scale-mode: stretch-to-fill;" />
+        <ui:VisualElement name="pause-container" class="pause-container" style="top: 372px; left: 0; position: relative; height: 461px; flex-shrink: 1; background-color: rgba(56, 56, 56, 0);">
+            <ui:Label text="Paused" class="pause-title" style="color: rgb(255, 172, 0); font-size: 64px; -unity-font-style: bold;" />
+            <ui:Button name="ResumeButton" text="Resume" class="button menu-button" style="height: 80px; width: 600px; margin-top: 20px; margin-bottom: 20px;" />
+            <ui:Button name="OptionsButton" text="Options" class="button menu-button" style="margin-top: 20px; margin-bottom: 20px;" />
+            <ui:Button name="QuitButton" text="Quit to Menu" class="button menu-button" style="margin-top: 20px; margin-bottom: 20px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

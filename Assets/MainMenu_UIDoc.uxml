@@ -7,4 +7,21 @@
         <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="QuitButton" class="button menu-button" />
     </ui:GroupBox>
     <ui:Label tabindex="-1" text="The Hollow" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GameTitle" style="position: absolute; font-size: 110px; top: 155px; left: 585px; width: 750px; -unity-text-align: upper-center; -unity-font: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&quot;); -unity-font-style: bold; color: rgb(255, 164, 16); align-items: center; right: 562px;" />
+
+    <!-- Pause Menu Panel (hidden by default, shown when ESC is pressed) -->
+    <ui:VisualElement name="PausePanel" class="pause-panel" style="display: none;">
+        <!-- dark translucent overlay -->
+        <ui:VisualElement class="pause-overlay" />
+
+        <!-- centered pause content -->
+        <ui:VisualElement class="pause-container">
+            <ui:Label text="Paused" class="pause-title" />
+            <ui:Image name="PauseBackgroundImage" class="menu-background"/>
+            <ui:Button name="ResumeButton" class="button menu-button" text="Resume" />
+            <ui:Button name="OptionsButton" class="button menu-button" text="Options" />
+            <ui:Button name="QuitButton" class="button menu-button" text="Quit to Menu" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+
+
 </ui:UXML>

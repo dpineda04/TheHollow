@@ -408,6 +408,8 @@
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs"
 "Assets/NatureStarterKit2/Standard Assets/Effects/ImageEffects/Scripts/Vortex.cs"
 "Assets/UI Scripts/MainMenuController.cs"
+"Assets/UI Scripts/PauseDebugger.cs"
+"Assets/UI Scripts/PauseManager.cs"
 "Assets/UI Scripts/PickupHintUI.cs"
 "Assets/UI Scripts/UIDebugger.cs"
 -langversion:9.0
