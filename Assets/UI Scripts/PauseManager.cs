@@ -23,7 +23,7 @@ public class PauseManager : MonoBehaviour
 
         // Cache elements
         pausePanel = root.Q<VisualElement>("PausePanel");
-        if (pausePanel == null) Debug.LogWarning("PausePanel not found in UXML (name must match).");
+       
 
         // Assuming you've named these classes/nodes in your UXML:
         pauseOverlay   = pausePanel?.Q<VisualElement>("pause-overlay");
@@ -143,5 +143,23 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    void Awake()
+    {
+        uiDoc = GetComponent<UIDocument>();
+        // Ensure the UIDocument component is only enabled during Play mode
+        if (uiDoc != null)
+            uiDoc.enabled = Application.isPlaying;
+    }
+
+    // This ensures the component toggles automatically when you press Play/Stop in editor
+    void OnValidate()
+    {
+        // Only run in editor
+#if UNITY_EDITOR
+        if (uiDoc == null) uiDoc = GetComponent<UIDocument>();
+        if (uiDoc != null) uiDoc.enabled = Application.isPlaying;
+#endif
     }
 }

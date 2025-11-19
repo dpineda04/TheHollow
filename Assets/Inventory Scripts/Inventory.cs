@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     public static Inventory instance; //only one inventory will exist
 
     [Header("Inventory Settings")]
-    public int slotCount = 4;
+    public int slotCount = 1;
 
     [Tooltip("Fixed-size inventory array")]
     public Item[] items; //fixed-size inventory (curr have 5 objects)
@@ -18,6 +18,10 @@ public class Inventory : MonoBehaviour
 
     public event Action onInventoryChanged;
 //event that ui and other systems can subscribe to
+
+    public event Action OnInventoryFull;          // others (spawner) can subscribe to this
+
+    private bool hasFiredFullEvent = false;      // ensure full event only fires once until inventory no longer full
 
 
     private void Awake()
@@ -69,14 +73,20 @@ public class Inventory : MonoBehaviour
         items[slotIndex] = newItem;
         slotOccupied[slotIndex] = true;
         onInventoryChanged?.Invoke();
-        Debug.Log("Item added. Item: " + newItem + ". slot index: " + slotIndex);
+        //Debug.Log("Item added. Item: " + newItem + ". slot index: " + slotIndex);
 
         //*** in here, place any calls into outer functions or UI, like destroying object
         // i want to destroy the object
         //then at some point, have a bool to see if the list is full, if it is:
             //then start the final sequence. 
 
-        
+          // --- check for full and raise event once ---
+        if (IsFull() && !hasFiredFullEvent)
+        {
+            hasFiredFullEvent = true;
+            Debug.Log("[Inventory] Inventory is full — raising OnInventoryFull.");
+            OnInventoryFull?.Invoke();
+        }
 
         return true;
     }
