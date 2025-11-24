@@ -10,7 +10,7 @@ public class MonsterAI : MonoBehaviour
     public float loseSightTimeout = 5f;      // how long to keep chasing after losing target
 
     [Header("Movement (tweak in Inspector)")]
-    public float walkSpeed = 3.5f;
+    public float walkSpeed = 2.5f;
     public float runSpeed = 6.5f;
     public float acceleration = 8f;
     public float angularSpeed = 120f;
