@@ -57,15 +57,9 @@ public class FlashlightPickup : MonoBehaviour
                 Pickup(hit.collider.gameObject);
                 return;
             }
-            else
-            {
-                Debug.Log("[FlashlightPickup] Raycast hit object but it is not tagged 'Flashlight'. Tag: " + hit.collider.tag);
-            }
+            
         }
-        else
-        {
-            Debug.Log("[FlashlightPickup] Raycast did not hit anything in range (" + pickupRange + ").");
-        }
+        
 
         // 2) Fallback: proximity check (find nearest tagged flashlight within range)
         Collider[] cols = Physics.OverlapSphere(playerCamera.transform.position, pickupRange, pickupLayers, QueryTriggerInteraction.Collide);

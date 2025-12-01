@@ -12,14 +12,4 @@ public class Item : ScriptableObject
     [Tooltip("Designated slot index")]
     public int designatedSlot; // the slot that the item belongs to
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     public static Inventory instance; //only one inventory will exist
 
     [Header("Inventory Settings")]
-    public int slotCount = 1;
+    public int slotCount = 5;
 
     [Tooltip("Fixed-size inventory array")]
     public Item[] items; //fixed-size inventory (curr have 5 objects)
