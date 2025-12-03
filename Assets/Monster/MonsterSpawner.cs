@@ -42,5 +42,19 @@ public class MonsterSpawner : MonoBehaviour
             var player = GameObject.FindGameObjectWithTag("Player");
             if (player != null) ai.SetTarget(player.transform);
         }
+
+        // ---- UNLOCK THE EXIT ----
+        // If you implemented ExitTrigger.Instance, this will unlock the house exit.
+        if (ExitTrigger.Instance != null)
+        {
+            ExitTrigger.Instance.UnlockExit();
+            Debug.Log("[MonsterSpawner] Exit unlocked because monster spawned.");
+        }
+        else
+        {
+            Debug.LogWarning("[MonsterSpawner] ExitTrigger.Instance is null. Ensure ExitTrigger exists.");
+        }
+
+        
     }
 }
