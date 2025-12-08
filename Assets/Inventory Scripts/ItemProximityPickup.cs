@@ -76,14 +76,14 @@ public class ItemProximityPickup : MonoBehaviour
     {
         if (other.CompareTag("Player")) // checking that its the player that is close
         {
-            Debug.Log($"{gameObject.name}: Player is near object!");
+           // Debug.Log($"{gameObject.name}: Player is near object!");
   
         }
 
         var pm = other.GetComponent<PlayerMovement>();
         if (pm != null) {playerMovement = pm;}
 
-        Debug.Log($"Press F to pick up {item.itemName}");
+        //Debug.Log($"Press F to pick up {item.itemName}");
          // Show hint: pass this.gameObject as the source
             PickupHintUI.instance?.ShowHint(gameObject, playerMovement.interactKey, item?.itemName ?? gameObject.name);
         
@@ -95,7 +95,7 @@ public class ItemProximityPickup : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Debug.Log($"{gameObject.name}: Player has moved away from object.");
+           // Debug.Log($"{gameObject.name}: Player has moved away from object.");
         }
 
          PickupHintUI.instance?.HideHint(gameObject);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; // For LayoutRebuilder
 using TMPro;
 
 public class PickupHintUI : MonoBehaviour
@@ -8,8 +9,10 @@ public class PickupHintUI : MonoBehaviour
     public static PickupHintUI instance; // easy singleton
 
     [Tooltip("Assign the TextMeshProUGUI element that will display hints")]
-    public TMP_Text hintText; // drag your TextMeshProUGUI object here, 
-    // hint text style should be changed 
+    public TMP_Text hintText; // drag your TextMeshProUGUI object here
+
+    [Tooltip("Assign the background GameObject (Image) that surrounds the text)")]
+    public GameObject hintBackground; // drag HintBackground here
 
     public CanvasGroup canvasGroup;
 
@@ -18,7 +21,7 @@ public class PickupHintUI : MonoBehaviour
 
     private void Awake()
     {
-       if (instance != null && instance != this)
+        if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
@@ -27,17 +30,19 @@ public class PickupHintUI : MonoBehaviour
 
         if (hintText != null) hintText.text = "";
         if (canvasGroup != null) canvasGroup.alpha = 0f;
+
+        // Ensure background starts hidden if assigned
+        if (hintBackground != null) hintBackground.SetActive(false);
     }
 
-
     // Show a hint. 'source' is the GameObject that requested it (e.g., the pickup)
-    //key and object name will be given though itemProxomityPickup, placed on each object
-
     public void ShowHint(GameObject source, KeyCode key, string objectName)
     {
         if (hintText == null) return;
         currentSource = source;
         hintText.text = $"Press [{key}] to pick up {objectName}";
+
+        // If you're using a CanvasGroup for fade/visibility, enable it
         if (canvasGroup != null)
         {
             canvasGroup.alpha = 1f; // lightweight show (replace with tweens for smoothness)
@@ -48,12 +53,38 @@ public class PickupHintUI : MonoBehaviour
         {
             hintText.enabled = true;
         }
+
+        // Enable the background image/panel if assigned
+        if (hintBackground != null)
+        {
+            hintBackground.SetActive(true);
+
+            // If the background uses a layout group / ContentSizeFitter, force immediate rebuild so it resizes to the new text
+            RectTransform bgRect = hintBackground.GetComponent<RectTransform>();
+            if (bgRect != null)
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(bgRect);
+            }
+
+            // If the background has its own CanvasGroup and you want it to follow the main canvasGroup's alpha:
+            if (canvasGroup != null)
+            {
+                CanvasGroup bgCg = hintBackground.GetComponent<CanvasGroup>();
+                if (bgCg != null)
+                {
+                    bgCg.alpha = canvasGroup.alpha;
+                    bgCg.interactable = canvasGroup.interactable;
+                    bgCg.blocksRaycasts = canvasGroup.blocksRaycasts;
+                }
+            }
+        }
     }
 
-     public void HideHint(GameObject source)
+    public void HideHint(GameObject source)
     {
         if (source != currentSource) return;
         currentSource = null;
+
         if (canvasGroup != null)
         {
             canvasGroup.alpha = 0f;
@@ -64,6 +95,11 @@ public class PickupHintUI : MonoBehaviour
         {
             hintText.text = "";
             hintText.enabled = false;
+        }
+
+        if (hintBackground != null)
+        {
+            hintBackground.SetActive(false);
         }
     }
 
@@ -82,5 +118,11 @@ public class PickupHintUI : MonoBehaviour
             hintText.text = "";
             hintText.enabled = false;
         }
+
+        if (hintBackground != null)
+        {
+            hintBackground.SetActive(false);
+        }
     }
 }
+

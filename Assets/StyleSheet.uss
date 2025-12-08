@@ -1,72 +1,70 @@
 .menu-button {
-    width: 600px;
-  height: 80px;
-
-  /* ensure no image hides the color */
-  
-  /* valid color */
-  background-color: rgb(255, 230, 179);
-
-  /* border must have width, style, and color (color must be a Color, not a keyword) */
-  border-width: 6px;
-  border-style: solid;
-  border-color: rgb(60, 33, 1);
-
-  /* rounded corners (shorthand) */
-  border-radius: 10px;
-
-  /* font & text */
-  -unity-font: url("project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&guid=e3265ab4bf004d28a9537516768c1c75&type=3#LiberationSans");
-  font-size: 32px;
-  -unity-font-style: bold;
-  color: rgb(60, 33, 1);
-  -unity-text-align: middle-center;
-
-  /* layout */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 450px;
+    height: 80px;
+    background-color: rgb(255, 230, 179);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgb(60, 33, 1);
+    border-radius: 10px;
+    -unity-font: url("project://database/Assets/UI%20Scripts/Lancelot/Lancelot-Regular.ttf?fileID=12800000&guid=e7246a7e404425949be61a5279c151e2&type=3#Lancelot-Regular");
+    font-size: 32px;
+    -unity-font-style: bold;
+    color: rgb(60, 33, 1);
+    -unity-text-align: middle-center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -unity-font-definition: initial;
 }
 
 .menu-background {
-  position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
-  background-image: url("Pictures/forest_spooky.jpg"); /* replace this with any picture*/
-  background-size: cover;
-  background-position: center;
-  opacity: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("project://database/Assets/Pictures/pause%201.png?fileID=2800000&guid=8345d3fef5aaa3c4d976e72e9af3493c&type=3#pause 1");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
 }
 
 .pause-panel {
-  position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
-  display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
 }
 
 .pause-overlay {
-  position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .pause-container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 24px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
 }
 
 .pause-title {
-  font-size: 48px;
-  color: rgb(255, 230, 179);
-  unity-text-align: middle-center;
-  margin-bottom: 8px;
+    font-size: 48px;
+    color: rgb(255, 230, 179);
+    unity-text-align: middle-center;
+    margin-bottom: 8px;
 }
