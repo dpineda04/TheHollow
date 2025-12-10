@@ -54,7 +54,7 @@ public class PauseManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("[PauseManager] Auto-found UIDocument on: " + uiDoc.gameObject.name);
+                    //Debug.Log("[PauseManager] Auto-found UIDocument on: " + uiDoc.gameObject.name);
                 }
             }
         }
@@ -79,7 +79,7 @@ public class PauseManager : MonoBehaviour
         mainMenuButton = root.Q<Button>(mainMenuButtonName);
         quitButton = root.Q<Button>(quitButtonName);
 
-        Debug.Log($"[PauseManager] Query results -> pausePanel={(pausePanel!=null)}, optionsPanel={(optionsPanel!=null)}, resume={(resumeButton!=null)}, optionsBtn={(optionsButton!=null)}, mainMenuBtn={(mainMenuButton!=null)}, quitBtn={(quitButton!=null)}");
+        //Debug.Log($"[PauseManager] Query results -> pausePanel={(pausePanel!=null)}, optionsPanel={(optionsPanel!=null)}, resume={(resumeButton!=null)}, optionsBtn={(optionsButton!=null)}, mainMenuBtn={(mainMenuButton!=null)}, quitBtn={(quitButton!=null)}");
 
         // subscribe safely
         if (resumeButton != null) resumeButton.clicked -= OnResumeClicked;
@@ -136,7 +136,7 @@ public class PauseManager : MonoBehaviour
 
     private void EnterPause()
     {
-        Debug.Log("[PauseManager] EnterPause()");
+        //Debug.Log("[PauseManager] EnterPause()");
         if (pausePanel == null)
         {
             Debug.LogWarning("[PauseManager] pausePanel not found. Check pausePanelName matches the UXML element name.");

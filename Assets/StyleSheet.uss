@@ -68,3 +68,41 @@
     unity-text-align: middle-center;
     margin-bottom: 8px;
 }
+
+.inventory-root {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start; /* prevents child-stretch from forcing heights */
+}
+
+/* slot box - explicit size */
+.slot {
+  width: 64px;
+  height: 64px;
+  position: relative; /* children absolute will be relative to this */
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* optional, clips children */
+}
+
+/* children overlap by being absolute and filling parent */
+.silhouette, .item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: contain; /* or cover depending on look */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* hidden until collected */
+.item {
+  display: none;
+  pointer-events: none; /* so the slot root receives hover events */
+}

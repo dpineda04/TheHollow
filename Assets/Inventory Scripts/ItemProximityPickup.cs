@@ -30,7 +30,7 @@ public class ItemProximityPickup : MonoBehaviour
     public void TryPickup()
     {
       
-        Debug.Log($"[ItemProximityPickup] TryPickup called on '{gameObject.name}', item={item?.itemName ?? "NULL"}");
+       // Debug.Log($"[ItemProximityPickup] TryPickup called on '{gameObject.name}', item={item?.itemName ?? "NULL"}");
 
 
         if (Inventory.instance == null)
@@ -56,7 +56,7 @@ public class ItemProximityPickup : MonoBehaviour
 
         if (added)
         {
-            Debug.Log($"[ItemProximityPickup] {item.name} was picked up!");
+            //Debug.Log($"[ItemProximityPickup] {item.name} was picked up!");
             Inventory.instance.PrintInventory();
             PickupHintUI.instance?.HideHint(gameObject);
             Destroy(gameObject);
@@ -85,6 +85,7 @@ public class ItemProximityPickup : MonoBehaviour
 
         //Debug.Log($"Press F to pick up {item.itemName}");
          // Show hint: pass this.gameObject as the source
+           
             PickupHintUI.instance?.ShowHint(gameObject, playerMovement.interactKey, item?.itemName ?? gameObject.name);
         
     }

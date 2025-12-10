@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="slot" style="flex-grow: 1; width: 150px; height: 150px; position: absolute; top: 260px; left: 649px;">
+        <ui:VisualElement name="silhouette" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/zebra%20silhouette.png?fileID=2800000&amp;guid=b47f9c5d97a995a4382d91ba49f171ef&amp;type=3#zebra silhouette&quot;);" />
+        <ui:VisualElement name="item" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/zebra%20actual.png?fileID=2800000&amp;guid=dc3ece176629a9747acce3b5d4001d5f&amp;type=3#zebra actual&quot;); display: none;" />
+    </ui:VisualElement>
+</ui:UXML>

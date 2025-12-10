@@ -1,10 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/StyleSheet.uss?fileID=7433441132597879392&amp;guid=e89882fce1ecee24ea6ee6cde210e3d0&amp;type=3#StyleSheet" />
+    <Style src="project://database/Assets/updatedStyle02.uss?fileID=7433441132597879392&amp;guid=e022117028f3cc34287f26dd6323b4c7&amp;type=3#updatedStyle02" />
     <ui:VisualElement name="HudRoot" />
-    <ui:VisualElement name="PausePanel" class="pause-panel" style="display: none; position: absolute; bottom: 0; width: 1920px; height: 1080px; background-image: url(&quot;project://database/Assets/Pictures/pause.png?fileID=2800000&amp;guid=7d864b8fe5dac6e418f7079ee95e459b&amp;type=3#pause&quot;); background-color: rgba(0, 0, 0, 0.62);">
+    <ui:VisualElement name="pause-panel" class="pause-panel" style="display: none; position: absolute; bottom: 0; width: 1920px; height: 1080px; background-image: url(&quot;project://database/Assets/Pictures/pause.png?fileID=2800000&amp;guid=7d864b8fe5dac6e418f7079ee95e459b&amp;type=3#pause&quot;); background-color: rgba(0, 0, 0, 0.62);">
         <ui:VisualElement name="pause-overlay" class="pause-overlay" style="bottom: 100%; right: 100%; display: flex; background-image: url(&quot;project://database/Assets/Pictures/forest_spooky.jpg?fileID=2800000&amp;guid=34288929bf8fdb449a29f3b895c6d92f&amp;type=3#forest_spooky&quot;); -unity-background-scale-mode: stretch-to-fill;" />
         <ui:VisualElement name="pause-container" class="pause-container" style="top: 225px; left: 37%; position: relative; height: 659px; flex-shrink: 1; background-color: rgba(56, 56, 56, 0); width: 1011px;">
-            <ui:Button name="ResumeButton" text="Resume" class="button menu-button" style="height: 80px; width: 450px; margin-top: 45px; margin-bottom: 45px;" />
+            <ui:Button name="ResumeButton" text="Resume" class="menu-button" style="height: 80px; width: 450px; margin-top: 45px; margin-bottom: 45px;" />
             <ui:Button name="OptionsButton" text="Options" class="button menu-button" style="margin-top: 45px; margin-bottom: 45px;" />
             <ui:Button name="QuitButton" text="Quit to Menu" class="button menu-button" style="margin-top: 45px; margin-bottom: 45px;" />
         </ui:VisualElement>
@@ -13,5 +13,27 @@
     <ui:VisualElement name="death-panel" style="flex-grow: 1; background-color: rgba(253, 253, 253, 0.39); display: none; background-image: url(&quot;project://database/Assets/Pictures/died.png?fileID=2800000&amp;guid=9dccff7c7783d0d4796597f89cb3404f&amp;type=3#died&quot;);">
         <ui:Button text="Respawn" parse-escape-sequences="true" display-tooltip-when-elided="true" name="respawn-button" class="menu-button" style="align-self: center; top: 75%; right: 30%;" />
         <ui:Button text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="mainmenu-button" class="menu-button" style="align-self: center; top: 67%; left: 30%;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="inventory-root" class="inventory-root" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Pictures/inventory.png?fileID=2800000&amp;guid=924a53b2ba46ab0478e9f05cf6a3dc5b&amp;type=3#inventory&quot;); background-color: rgba(0, 0, 0, 0.32); display: none;">
+        <ui:VisualElement name="slot_0" class="slot" style="flex-grow: 1; position: absolute; width: 150px; height: 150px; top: 237px; left: 703px;">
+            <ui:VisualElement name="silhouette" class="silhouette" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/zebra%20silhouette.png?fileID=2800000&amp;guid=b47f9c5d97a995a4382d91ba49f171ef&amp;type=3#zebra silhouette&quot;);" />
+            <ui:VisualElement name="item" class="item" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/zebra%20actual.png?fileID=2800000&amp;guid=dc3ece176629a9747acce3b5d4001d5f&amp;type=3#zebra actual&quot;); display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot_1" style="flex-grow: 1; position: absolute; width: 150px; height: 150px; top: 357px; left: 926px;">
+            <ui:VisualElement name="silhouette" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/radio%20silhouette.png?fileID=2800000&amp;guid=fd13c85f7550ee84bb8773071eb55c18&amp;type=3#radio silhouette&quot;); display: flex;" />
+            <ui:VisualElement name="item" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/radio%20actual.png?fileID=2800000&amp;guid=e28f6a8e30904084bbcc2b54b97a5cfe&amp;type=3#radio actual&quot;); display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot_2" style="flex-grow: 1; position: absolute; width: 150px; height: 150px; top: 475px; left: 699px;">
+            <ui:VisualElement name="silhouette" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/book%20silhouette.png?fileID=2800000&amp;guid=31d198685b7830144a4c7b46f949e372&amp;type=3#book silhouette&quot;);" />
+            <ui:VisualElement name="item" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/book%20actual.png?fileID=2800000&amp;guid=c390e74e418972c459ae10b0d0d49f2d&amp;type=3#book actual&quot;); display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot_3" style="flex-grow: 1; position: absolute; width: 150px; height: 150px; top: 625px; left: 934px;">
+            <ui:VisualElement name="silhouette" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/toys%20silhouette.png?fileID=2800000&amp;guid=ea506dba1a9f9ad4cbf83934bd889657&amp;type=3#toys silhouette&quot;);" />
+            <ui:VisualElement name="item" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/toys%20actual.png?fileID=2800000&amp;guid=2f9f824d4579c1b4a996990bd015cca1&amp;type=3#toys actual&quot;); display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot_4" style="flex-grow: 1; position: absolute; width: 150px; height: 150px; top: 723px; left: 697px;">
+            <ui:VisualElement name="silhouette" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/snowglobe%20silhouette.png?fileID=2800000&amp;guid=28e4bdfe95668da458af09da804b6e8f&amp;type=3#snowglobe silhouette&quot;);" />
+            <ui:VisualElement name="item" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Pictures/Item%20PNGS/snowglobe%20actual.png?fileID=2800000&amp;guid=d2936e32a54edc041a1d8248ba879482&amp;type=3#snowglobe actual&quot;); display: none;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

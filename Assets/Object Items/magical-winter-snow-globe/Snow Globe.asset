@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Snow Globe
   m_EditorClassIdentifier: 
   itemName: Snow Globe
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: d2936e32a54edc041a1d8248ba879482, type: 3}
+  silhouetteIcon: {fileID: 21300000, guid: 28e4bdfe95668da458af09da804b6e8f, type: 3}
   designatedSlot: 4

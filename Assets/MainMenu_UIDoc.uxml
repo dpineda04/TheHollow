@@ -1,6 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/StyleSheet.uss?fileID=7433441132597879392&amp;guid=e89882fce1ecee24ea6ee6cde210e3d0&amp;type=3#StyleSheet" />
-    <ui:Image name="BackgroundImage" class="menu-background" />
+    <Style src="project://database/Assets/updatedStyle02.uss?fileID=7433441132597879392&amp;guid=e022117028f3cc34287f26dd6323b4c7&amp;type=3#updatedStyle02" />
     <ui:GroupBox name="ButtonArea" style="position: absolute; align-items: center; align-self: center; width: 700px; height: 400px; top: 500px; left: 610px; border-left-color: rgb(255, 0, 143); border-right-color: rgb(255, 0, 143); border-top-color: rgb(255, 0, 143); border-bottom-color: rgb(255, 0, 143); justify-content: space-around;">
         <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayButton" class="button menu-button" />
         <ui:Button text="Options" parse-escape-sequences="true" display-tooltip-when-elided="true" name="OptionsButton" class="button menu-button" />

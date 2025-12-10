@@ -1915,7 +1915,7 @@ MonoBehaviour:
   playerCamera: {fileID: 963194227}
   flashlight: {fileID: 55153855}
   pickupRange: 3
-  pickupKey: 101
+  pickupKey: 99
   pickupLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2666,6 +2666,8 @@ GameObject:
   - component: {fileID: 977654866}
   - component: {fileID: 977654868}
   - component: {fileID: 977654869}
+  - component: {fileID: 977654870}
+  - component: {fileID: 977654871}
   m_Layer: 0
   m_Name: UI Managers
   m_TagString: Untagged
@@ -2701,7 +2703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneName: MainMenu
-  pausePanelName: PausePanel
+  pausePanelName: pause-panel
   pauseOverlayName: pause-overlay
   pauseContainerName: pause-container
   optionsPanelName: options-panel
@@ -2732,7 +2734,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977654864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c89d1ef6d799d047a4914ddae79144e, type: 3}
   m_Name: 
@@ -2755,6 +2757,40 @@ MonoBehaviour:
   mainMenuButtonName: mainmenu-button
   optionsButtonName: death-options-btn
   optionsPanelName: options-panel
+--- !u!114 &977654870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977654864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf105791c83031418f7542c66df2d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiDocument: {fileID: 977654867}
+  itemsInOrder:
+  - {fileID: 11400000, guid: b49500f7e23aef54998814fba924c389, type: 2}
+  - {fileID: 11400000, guid: db527a7bf1d6a22449f0eb3be699c7a2, type: 2}
+  - {fileID: 11400000, guid: 57dcb0c3eadfd9644b55a5355155fa01, type: 2}
+  - {fileID: 11400000, guid: c22c596cd353361449fba3ffc48e37a1, type: 2}
+  - {fileID: 11400000, guid: 0c093cff135a9df4cae858015177f9fe, type: 2}
+--- !u!114 &977654871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977654864}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5942909ad91914ba8e7305f8b28d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiDocument: {fileID: 0}
+  inventoryElementName: inventory-root
+  toggleMode: 0
 --- !u!1 &1022614670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1da13bd2a49c85c4390f863569c0a316, type: 3}
@@ -3552,7 +3588,7 @@ GameObject:
   - component: {fileID: 1730506963}
   m_Layer: 0
   m_Name: PlayerObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

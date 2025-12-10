@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Zebra
   m_EditorClassIdentifier: 
   itemName: Zebra Plush
-  icon: {fileID: 21300000, guid: cade9889f189fb74982deb3219bf7578, type: 3}
+  icon: {fileID: 21300000, guid: dc3ece176629a9747acce3b5d4001d5f, type: 3}
+  silhouetteIcon: {fileID: 21300000, guid: b47f9c5d97a995a4382d91ba49f171ef, type: 3}
   designatedSlot: 0

@@ -1,0 +1,107 @@
+.menu-button {
+    width: 450px;
+    height: 80px;
+    background-color: rgb(255, 230, 179);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgb(60, 33, 1);
+    border-radius: 10px;
+    -unity-font: url("project://database/Assets/UI%20Scripts/Lancelot/Lancelot-Regular.ttf?fileID=12800000&guid=e7246a7e404425949be61a5279c151e2&type=3#Lancelot-Regular");
+    font-size: 32px;
+    -unity-font-style: bold;
+    color: rgb(60, 33, 1);
+    -unity-text-align: middle-center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -unity-font-definition: initial;
+}
+
+.menu-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("project://database/Assets/Pictures/pause%201.png?fileID=2800000&guid=8345d3fef5aaa3c4d976e72e9af3493c&type=3#pause 1");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+}
+
+.pause-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+.pause-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.pause-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.pause-title {
+    font-size: 48px;
+    color: rgb(255, 230, 179);
+    unity-text-align: middle-center;
+    margin-bottom: 8px;
+}
+
+.inventory-root {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start; /* prevents child-stretch from forcing heights */
+}
+
+/* slot box - explicit size */
+.slot {
+  width: 64px;
+  height: 64px;
+  position: relative; /* children absolute will be relative to this */
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* optional, clips children */
+}
+
+/* children overlap by being absolute and filling parent */
+.silhouette, .item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-size: contain; /* or cover depending on look */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* hidden until collected */
+.item {
+  display: none;
+  pointer-events: none; /* so the slot root receives hover events */
+}

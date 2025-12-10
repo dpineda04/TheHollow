@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Toys
   m_EditorClassIdentifier: 
   itemName: Toys
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 2f9f824d4579c1b4a996990bd015cca1, type: 3}
+  silhouetteIcon: {fileID: 21300000, guid: ea506dba1a9f9ad4cbf83934bd889657, type: 3}
   designatedSlot: 3

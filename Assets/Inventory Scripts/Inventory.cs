@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
 
     public static Inventory instance; //only one inventory will exist
+      public static Inventory Instance { get; private set; }
 
     [Header("Inventory Settings")]
     public int slotCount = 5;
@@ -14,9 +15,10 @@ public class Inventory : MonoBehaviour
     [Tooltip("Fixed-size inventory array")]
     public Item[] items; //fixed-size inventory (curr have 5 objects)
     [HideInInspector]
-    public bool[] slotOccupied; //tracking used slots
+    public bool[] slotOccupied = new bool[5]; //tracking used slots
 
     public event Action onInventoryChanged;
+    public event Action<Item> OnItemCollected;
 //event that ui and other systems can subscribe to
 
     public event Action OnInventoryFull;          // others (spawner) can subscribe to this
@@ -34,6 +36,7 @@ public class Inventory : MonoBehaviour
         }
 
         instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
 
         //initlaize arrays 
@@ -73,6 +76,9 @@ public class Inventory : MonoBehaviour
         items[slotIndex] = newItem;
         slotOccupied[slotIndex] = true;
         onInventoryChanged?.Invoke();
+         OnItemCollected?.Invoke(items[slotIndex]);
+
+        Debug.Log("[Inventory] Fired OnItemCollected event");
         //Debug.Log("Item added. Item: " + newItem + ". slot index: " + slotIndex);
 
         //*** in here, place any calls into outer functions or UI, like destroying object
@@ -95,6 +101,7 @@ public class Inventory : MonoBehaviour
     public Item GetItem(int slotIndex)
     {
         if (slotIndex < 0 || slotIndex >= slotCount) return null;
+       
         return items[slotIndex];
     }
 

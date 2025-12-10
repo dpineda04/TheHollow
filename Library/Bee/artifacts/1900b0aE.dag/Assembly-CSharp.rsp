@@ -367,6 +367,8 @@
 "Assets/Basic Functions/ExitTrigger.cs"
 "Assets/Basic Functions/FlashlightPickup.cs"
 "Assets/Basic Functions/GameManager.cs"
+"Assets/Basic Functions/InventoryScreenController.cs"
+"Assets/Basic Functions/InventoryToggle.cs"
 "Assets/Basic Functions/MoveCamera.cs"
 "Assets/Basic Functions/ObjectMover.cs"
 "Assets/Basic Functions/PlayerCam.cs"

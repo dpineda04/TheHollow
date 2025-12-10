@@ -10,7 +10,7 @@ public class FlashlightPickup : MonoBehaviour
 
     [Header("Pickup")]
     public float pickupRange = 3f;   // max pickup distance
-    public KeyCode pickupKey = KeyCode.E;
+    public KeyCode pickupKey = KeyCode.C;
     public LayerMask pickupLayers = ~0; // which layers raycast/overlap should consider (default = everything)
 
     private bool hasFlashlight = false;
