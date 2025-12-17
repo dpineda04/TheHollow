@@ -18,9 +18,11 @@ public class ItemProximityPickup : MonoBehaviour
     //  Optional: show a simple UI prompt if you want later
     private void Start()
         {
+            
         // Quick sanity warning:
             if (item == null)
             Debug.LogWarning($"[ItemProximityPickup] '{gameObject.name}' has no Item assigned. Assign an Item ScriptableObject in the Inspector.");
+        
         }
 
 
@@ -31,7 +33,7 @@ public class ItemProximityPickup : MonoBehaviour
     {
       
        // Debug.Log($"[ItemProximityPickup] TryPickup called on '{gameObject.name}', item={item?.itemName ?? "NULL"}");
-
+      
 
         if (Inventory.instance == null)
         {
@@ -83,10 +85,11 @@ public class ItemProximityPickup : MonoBehaviour
         var pm = other.GetComponent<PlayerMovement>();
         if (pm != null) {playerMovement = pm;}
 
+
         //Debug.Log($"Press F to pick up {item.itemName}");
          // Show hint: pass this.gameObject as the source
-           
-            PickupHintUI.instance?.ShowHint(gameObject, playerMovement.interactKey, item?.itemName ?? gameObject.name);
+            
+         PickupHintUI.instance?.ShowHint(this.gameObject, playerMovement.interactKey, item?.itemName ?? gameObject.name);
         
     }
 

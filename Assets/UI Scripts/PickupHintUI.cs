@@ -19,8 +19,15 @@ public class PickupHintUI : MonoBehaviour
     // Track which object asked to show the hint (prevents one object hiding another's hint)
     private GameObject currentSource;
 
+    
+    public Item item;
+  
+    private PlayerMovement playerMovement;
+
     private void Awake()
     {
+        
+
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
@@ -38,6 +45,7 @@ public class PickupHintUI : MonoBehaviour
     // Show a hint. 'source' is the GameObject that requested it (e.g., the pickup)
     public void ShowHint(GameObject source, KeyCode key, string objectName)
     {
+        Debug.Log($"playerMovement = {playerMovement}, item = {objectName}, UI instance = {PickupHintUI.instance}, gameObject = {source}");
         if (hintText == null) return;
         currentSource = source;
         hintText.text = $"Press [{key}] to pick up {objectName}";
@@ -54,10 +62,13 @@ public class PickupHintUI : MonoBehaviour
             hintText.enabled = true;
         }
 
+        
         // Enable the background image/panel if assigned
         if (hintBackground != null)
         {
+            hintText.enabled = true;
             hintBackground.SetActive(true);
+            hintText.gameObject.SetActive(true);
 
             // If the background uses a layout group / ContentSizeFitter, force immediate rebuild so it resizes to the new text
             RectTransform bgRect = hintBackground.GetComponent<RectTransform>();
@@ -77,6 +88,7 @@ public class PickupHintUI : MonoBehaviour
                     bgCg.blocksRaycasts = canvasGroup.blocksRaycasts;
                 }
             }
+            Debug.Log($"[PickupHintUI] ShowHint: source={source.name}, key={key}, text='{hintText.text}'");
         }
     }
 

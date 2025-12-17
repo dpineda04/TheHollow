@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/updatedStyle02.uss?fileID=7433441132597879392&amp;guid=e022117028f3cc34287f26dd6323b4c7&amp;type=3#updatedStyle02" />
+    <ui:VisualElement name="end-screen" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Pictures/end%20screen.png?fileID=2800000&amp;guid=576968477d5831b4fbb9bef537fbbcb9&amp;type=3#end screen&quot;);">
+        <ui:Label tabindex="-1" text="Press Enter to return to menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="enter-text" style="position: absolute; top: 1010px; left: 1509px; background-color: rgba(254, 185, 84, 0); color: rgb(255, 186, 86); font-size: 24px; -unity-font-style: bold; -unity-font: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&quot;); -unity-font-definition: initial;" />
+    </ui:VisualElement>
+</ui:UXML>
